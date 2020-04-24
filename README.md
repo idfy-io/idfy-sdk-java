@@ -23,28 +23,28 @@ The example below shows how to get the details of a specific document.
 
 ```java
 // Set your credentials and desired scopes
-        List myList = new LinkedList();
+List myList = new LinkedList();
 
-        myList.add(OAuthScope.DocumentWrite);
-        myList.add(OAuthScope.DocumentRead);
-        myList.add(OAuthScope.DocumentFile);
+myList.add(OAuthScope.DocumentWrite);
+myList.add(OAuthScope.DocumentRead);
+myList.add(OAuthScope.DocumentFile);
 
-        IdfyConfiguration.setClientCredentials("Your account ID", "Your account secret", myList );
+IdfyConfiguration.setClientCredentials("Your account ID", "Your account secret", myList );
 
 // Make a call to retrieve the document
-        SignatureService service = new SignatureService();
+SignatureService service = new SignatureService();
 
-        CreateDocumentResponse document = null;
+CreateDocumentResponse document = null;
 
-        try {
-            document =  service.documentsGet(UUID.fromString("Your Document ID"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        } catch (IdfyException e) {
-            e.printStackTrace();
-        }
+try {
+    document =  service.documentsGet(UUID.fromString("Your Document ID"));
+} catch (Exception e) {
+    e.printStackTrace();
+} catch (IdfyException e) {
+    e.printStackTrace();
+}
 
-        System.out.println( document.toString() );
+System.out.println( document.toString() );
 
 ```
 
