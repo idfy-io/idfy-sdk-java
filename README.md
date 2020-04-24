@@ -16,7 +16,7 @@ Simply navigate to the [Releases](https://github.com/Signereno/test-idfy-java-sd
 
 ## Documentation
 - [Idfy REST API Reference](https://developer.idfy.io/api)
-- [Idfy Developer Documentation](https://docs.idfy.io)
+- [Idfy Developer Documentation](https://developer.idfy.io/docs)
 
 ## Sample Usage
 The example below shows how to get the details of a specific document.
