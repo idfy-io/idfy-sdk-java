@@ -49,5 +49,5 @@ System.out.println( document.toString() );
 ```
 
 ## Support
-- Open an [issue](https://github.com/idfy-io/idfy-sdk-net/issues) to report bugs or submit feature requests.
+- Open an [issue](https://github.com/idfy-io/idfy-sdk-java/issues) to report bugs or submit feature requests.
 - For other support requests, visit our [support page](https://support.idfy.io) or contact us at [support@idfy.io](mailto:support@idfy.io).
