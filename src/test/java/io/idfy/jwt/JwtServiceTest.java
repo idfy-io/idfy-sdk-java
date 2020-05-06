@@ -43,6 +43,7 @@ public class JwtServiceTest {
      *
      * 
      */
+    @Disabled
     @Test
     public void jwtValidatePostTest() throws IdfyException, Exception {
         ValidateJwtDto request =  new ValidateJwtDto.Builder().build();

@@ -49,6 +49,7 @@ public class AccountServiceTest {
      *
      * Requires one of the following scopes: [dealer]
      */
+    @Disabled
     @Test
     public void createAccountTest() throws IdfyException, Exception {
         CreateAccountRequest accountDetails =  new CreateAccountRequest.Builder().build();
@@ -114,6 +115,7 @@ public class AccountServiceTest {
      *
      * Get / create event connection string for the .net event servicebus
      */
+    @Disabled("Mock server returns 200 with empty body instead of 201")
     @Test
     public void retrieveAccountQueueConnectionStringTest() throws IdfyException, Exception {
         api.retrieveAccountQueueConnectionString();

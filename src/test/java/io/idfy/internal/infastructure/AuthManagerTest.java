@@ -5,6 +5,7 @@ import io.idfy.OAuthScope;
 import io.idfy.internal.infastructure.AuthManager;
 import io.idfy.models.IdfyException;
 import io.idfy.models.OAuthToken;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
@@ -15,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AuthManagerTest {
 
+    @Disabled
     @Test
     public void testAuthorize(){
         IdfyConfiguration.setBaseUrl("https://api.idfy.io");
