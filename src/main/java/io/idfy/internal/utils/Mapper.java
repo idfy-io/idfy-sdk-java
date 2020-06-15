@@ -8,12 +8,15 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.idfy.models.IdfyResponse;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public final class Mapper {
     private static final ObjectMapper mapper = new ObjectMapper()
             .registerModule(new JavaTimeModule())
             .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-            .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+            .disable(DeserializationFeature.ADJUST_DATES_TO_CONTEXT_TIME_ZONE); // .setDateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm"))
 //            .setSerializationInclusion(JsonInclude.Include.NON_NULL);
 
     public static <T> T fromJson(String json, Class<T> classOf) throws IOException {
