@@ -19,6 +19,8 @@ public final class Urls {
 
     public static final String IDENTIFICATION = String.format("%s/identification", BASE_URL);
 
+    public static final String IDENTIFICATIONV2 = String.format("%s/identification/v2", BASE_URL);
+
     public static final String MERCHANT_SIGN = String.format("%s/merchant", BASE_URL);
 
     public static final String JWT = String.format("%s/jwt", BASE_URL);
