@@ -61,7 +61,7 @@ public class AmlServiceTest {
      *
      * Person screening with data enhancement enabled for nationalities where data enhancement is provided. For other nationalities the data enhancement will be skipped  **Required fields**: Name with either birthDate or ssn.
      */
-    @Disabled("dato tull")
+    // @Disabled("dato tull")
     @Test
     public void b2CIdentifyAndScreeningRequestTest() throws IdfyException, Exception {
         String name = new String("123");
