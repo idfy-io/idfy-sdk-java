@@ -48,6 +48,9 @@ System.out.println( document.toString() );
 
 ```
 
+## Note
+Some dependencies might not be included in the JAR file. If this is the case, just import them normally with Maven, and everything should work.
+
 ## Support
 - Open an [issue](https://github.com/idfy-io/idfy-sdk-java/issues) to report bugs or submit feature requests.
 - For other support requests, visit our [support page](https://support.idfy.io) or contact us at [support@idfy.io](mailto:support@idfy.io).
