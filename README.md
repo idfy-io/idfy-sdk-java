@@ -12,7 +12,7 @@ The SDK will soon be available on Maven Central, and the JAR can also be downloa
 Coming soon!
 
 ### Download the JAR
-Simply navigate to the [Releases](https://github.com/Signereno/test-idfy-java-sdk/releases) tab in this repository. Each release includes a JAR file which can be downloaded and added to your project directly. [HINT](https://stackoverflow.com/questions/4955635/how-to-add-local-jar-files-to-a-maven-project)
+Simply navigate to the [Releases](https://github.com/idfy-io/idfy-sdk-java/releases) tab in this repository. Each release includes a JAR file which can be downloaded and added to your project directly. [HINT](https://stackoverflow.com/questions/4955635/how-to-add-local-jar-files-to-a-maven-project)
 
 ## Documentation
 - [Idfy REST API Reference](https://developer.idfy.io/api)
