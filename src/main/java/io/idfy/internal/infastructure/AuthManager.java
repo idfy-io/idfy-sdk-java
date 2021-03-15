@@ -1,7 +1,7 @@
 package io.idfy.internal.infastructure;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.squareup.okhttp.HttpUrl;
+import okhttp3.HttpUrl;
 import io.idfy.IdfyConfiguration;
 import io.idfy.OAuthScope;
 import io.idfy.Urls;

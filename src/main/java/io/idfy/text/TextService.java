@@ -1,7 +1,7 @@
 package io.idfy.text;
 
 import com.google.gson.reflect.TypeToken;
-import com.squareup.okhttp.HttpUrl;
+import okhttp3.HttpUrl;
 
 import io.idfy.OAuthScope;
 import io.idfy.IdfyBaseService;

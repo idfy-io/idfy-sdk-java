@@ -1,6 +1,6 @@
 package io.idfy.internal.infastructure;
 
-import com.squareup.okhttp.HttpUrl;
+import okhttp3.HttpUrl;
 import io.idfy.internal.utils.Mapper;
 import io.idfy.models.IdfyError;
 import io.idfy.models.IdfyException;

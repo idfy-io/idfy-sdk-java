@@ -4,7 +4,7 @@
 
     <groupId>io.idfy.sdk</groupId>
     <artifactId>idfy-sdk-java</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.version>1.3.11</kotlin.version>
@@ -42,6 +42,24 @@
                     <testFailureIgnore>false</testFailureIgnore>
                     <skipTests>false</skipTests>
                 </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
         <resources>
@@ -104,10 +122,12 @@
             <artifactId>okio</artifactId>
             <version>2.2.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
         <dependency>
-            <groupId>com.squareup.okhttp</groupId>
+            <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <version>2.7.5</version>
+            <version>4.9.1</version>
         </dependency>
+
     </dependencies>
 </project>

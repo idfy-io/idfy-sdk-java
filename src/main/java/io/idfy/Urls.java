@@ -3,7 +3,7 @@ package io.idfy;
 public final class Urls {
     public static final String BASE_URL = IdfyConfiguration.getBaseUrl();
 
-    static final String DEFAULT_BASE_URL = "https://api.idfy.io";
+    static final String DEFAULT_BASE_URL = "https://api.idfy.io"; //todo: https://api.signicat.io/identification/v2
 
     static final String DEFAULT_O_AUTH_BASE_URL = BASE_URL;
 

@@ -16,6 +16,13 @@ public final class IdfyException extends Throwable {
         this.error = error;
     }
 
+    /* todo: This desperately needs to include the individual error messages.
+
+    Right now the below exception from the API would just show up as "Validation Failed":
+    "{\"message\":\"Validation Failed\",\"errors\":[{\"field\":\"redirectSettings\",\"message\":\"Redirect settings is required when using `redirect` flow.\"}]}"
+
+     */
+
     public int getStatusCode() {
         return statusCode;
     }

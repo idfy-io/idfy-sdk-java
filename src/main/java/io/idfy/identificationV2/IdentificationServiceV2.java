@@ -6,15 +6,9 @@ import io.idfy.Urls;
 import io.idfy.identificationV2.models.*;
 import io.idfy.internal.utils.Encoder;
 import io.idfy.models.IdfyException;
-import com.squareup.okhttp.HttpUrl;
-import io.idfy.internal.utils.Encoder;
+import okhttp3.HttpUrl;
 
-import java.io.InputStream;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 

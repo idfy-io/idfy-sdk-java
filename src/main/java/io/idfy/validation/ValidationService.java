@@ -1,12 +1,14 @@
 package io.idfy.validation;
 
-import com.squareup.okhttp.HttpUrl;
+
 import io.idfy.IdfyBaseService;
 import io.idfy.OAuthScope;
 import io.idfy.Urls;
 import io.idfy.validation.models.*;
 import io.idfy.internal.utils.Encoder;
 import io.idfy.models.IdfyException;
+import okhttp3.HttpUrl;
+
 
 import java.time.OffsetDateTime;
 import java.util.List;

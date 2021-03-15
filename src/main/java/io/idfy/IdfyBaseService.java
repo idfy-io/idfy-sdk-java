@@ -1,11 +1,11 @@
 package io.idfy;
-import com.squareup.okhttp.HttpUrl;
 import io.idfy.internal.infastructure.AuthManager;
 import io.idfy.internal.infastructure.HttpRequestor;
 import io.idfy.internal.utils.Mapper;
 import io.idfy.models.IdfyException;
 import io.idfy.models.IdfyResponse;
 import io.idfy.models.OAuthToken;
+import okhttp3.HttpUrl;
 
 import java.io.IOException;
 import java.io.InputStream;

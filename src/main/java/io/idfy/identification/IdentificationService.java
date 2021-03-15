@@ -8,7 +8,7 @@ package io.idfy.identification;
  * Contact: support@idfy.io
  */
 
-import com.squareup.okhttp.HttpUrl;
+import okhttp3.HttpUrl;
 import io.idfy.IdfyBaseService;
 import io.idfy.OAuthScope;
 //import io.idfy.signature.models.IdentificationLogItem;
@@ -19,7 +19,7 @@ import io.idfy.Urls;
 import io.idfy.identification.models.*;
 import io.idfy.internal.utils.Encoder;
 import io.idfy.models.IdfyException;
-import com.squareup.okhttp.HttpUrl;
+import okhttp3.HttpUrl;
 import io.idfy.internal.utils.Encoder;
 
 import java.io.InputStream;

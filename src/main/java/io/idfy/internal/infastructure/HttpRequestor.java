@@ -5,11 +5,8 @@ import io.idfy.internal.utils.Mapper;
 import io.idfy.models.IdfyError;
 import io.idfy.models.IdfyException;
 import io.idfy.models.IdfyResponse;
-import com.squareup.okhttp.*;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request.Builder;
-import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.FormEncodingBuilder;
+import okhttp3.*;
+import okhttp3.Request.Builder;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
@@ -144,7 +141,7 @@ public final class HttpRequestor {
     }
 
     private static RequestBody buildFormBody(Map<String, String> map) {
-        FormEncodingBuilder formBodyBuilder = new FormEncodingBuilder();
+        FormBody.Builder formBodyBuilder = new FormBody.Builder();
 
         for (Map.Entry<String, String> entry : map.entrySet()) {
             formBodyBuilder.add(entry.getKey(), entry.getValue());
@@ -176,11 +173,11 @@ public final class HttpRequestor {
         CompletableFuture<IdfyResponse> response = new CompletableFuture<>();
 
         client.newCall(request).enqueue(new Callback() {
-            @Override public void onFailure(Request call, IOException e) {
+            @Override public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
             }
 
-            @Override public void onResponse(Response externalResponse) throws IOException {
+            @Override public void onResponse(Call call, Response externalResponse) throws IOException {
                 try {
                     IdfyResponse idfyResponse;
                     try {
@@ -200,7 +197,7 @@ public final class HttpRequestor {
                 }finally {
                     try {
                         externalResponse.body().close();
-                    } catch (IOException e) {
+                    } catch (NullPointerException e) { // IOException
                         e.printStackTrace();
                     }
                 }
@@ -233,11 +230,11 @@ public final class HttpRequestor {
         CompletableFuture<InputStream> response = new CompletableFuture<>();
 
         client.newCall(request).enqueue(new Callback() {
-            @Override public void onFailure(Request call, IOException e) {
+            @Override public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
             }
 
-            @Override public void onResponse(Response externalResponse) throws IOException {
+            @Override public void onResponse(Call call, Response externalResponse) throws IOException {
                 try {
                     if (externalResponse.isSuccessful()) {  // check whether the data is empty (without consuming it) here?
                         byte[] bytes = new byte[(int) externalResponse.body().contentLength()];
@@ -267,7 +264,7 @@ public final class HttpRequestor {
                 }finally {
                     try {
                         externalResponse.body().close();
-                    } catch (IOException e) {
+                    } catch (NullPointerException e) {
                         e.printStackTrace();
                     }
                 }
