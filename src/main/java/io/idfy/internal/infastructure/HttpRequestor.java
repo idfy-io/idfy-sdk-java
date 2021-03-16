@@ -279,7 +279,7 @@ public final class HttpRequestor {
     private static IdfyResponse buildResponse(Response response) throws IOException {
         String responseJson = "";
         DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
-        DATE_FORMAT.setLenient(false); // todo: Is there really not a more elegant way to set this in Java? -_-
+        DATE_FORMAT.setLenient(false); // todo
         
         String requestId = response.header("Request-Id"); //.getValue();
         String dateStr = response.header("Date"); //.getValue();
