@@ -15,14 +15,15 @@ import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
+import java.util.TimeZone;
 import java.util.concurrent.CompletableFuture;
 
 public final class HttpRequestor {
 
-    private static final DateFormat DATE_FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
+    private static DateFormat DATE_FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z", Locale.US);
     private static  final MediaType MEDIA_TYPE = MediaType.parse("application/json; charset=utf-8");
-
     private static OkHttpClient client = new OkHttpClient();
 
     public static IdfyResponse get(HttpUrl url, String token) throws Exception, IdfyException {
@@ -277,6 +278,8 @@ public final class HttpRequestor {
 
     private static IdfyResponse buildResponse(Response response) throws IOException {
         String responseJson = "";
+        DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
+        DATE_FORMAT.setLenient(false); // todo: Is there really not a more elegant way to set this in Java? -_-
         
         String requestId = response.header("Request-Id"); //.getValue();
         String dateStr = response.header("Date"); //.getValue();
