@@ -46,7 +46,7 @@ public class Identity  implements Serializable {
   /**
    * Date of birth.
    */
-  private final OffsetDateTime dateOfBirth;  // Default value is: null
+  private final String dateOfBirth;  // Default value is: null
 
   /**
    * National identity number.
@@ -109,7 +109,7 @@ public class Identity  implements Serializable {
       * Date of birth.
       * @return dateOfBirth
       **/
-      public OffsetDateTime getDateOfBirth() {return dateOfBirth;}
+      public String getDateOfBirth() {return dateOfBirth;}
 
       /**
       * National identity number.
@@ -136,7 +136,7 @@ public class Identity  implements Serializable {
       private String firstName;
       private String middleName;
       private String lastName;
-      private OffsetDateTime dateOfBirth;
+      private String dateOfBirth;
       private String nin;
       private String phoneNumber;
       private String email;
@@ -181,7 +181,7 @@ public class Identity  implements Serializable {
       return this;
     }
 
-    public Builder withDateOfBirth(OffsetDateTime dateOfBirth) {
+    public Builder withDateOfBirth(String dateOfBirth) {
       this.dateOfBirth = dateOfBirth;
       return this;
     }
